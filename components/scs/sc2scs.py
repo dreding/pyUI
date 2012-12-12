@@ -147,6 +147,25 @@ class TranslatorSc2Scs(Translator):
         @return: list of errors each element of list is a tuple(object, error)
         @rtype: list
         """
+        segment = core.Kernel.segment()
+        session = core.Kernel.session()
+        _segs = [segment.get_full_uri()]
+        search_segments =  ["/ui/core",
+                            "/seb/belarus",
+                            "/seb/planimetry",
+                            "/seb/graph",
+                            "/seb/rus",
+                            "/etc/questions",
+                            "/etc/com_keynodes",
+                            "/seb/test",
+                            "/proc/agents/nsm/keynode"]
+        _segs.extend(search_segments)
+
+
+        el = sc_utils.getElementByIdtf("test2_scs_sc", _segs)
+        if el==None:
+            return
+
         errors = []
         objs = objects.ScObject._sc2Objects(_output)
 
@@ -161,9 +180,8 @@ class TranslatorSc2Scs(Translator):
 
         # creating list of element to translate
         it = session.create_iterator(session.sc_constraint_new(sc_constants.CONSTR_3_f_a_a,
-                                                               _input,
                                                                sc.SC_A_CONST | sc.SC_POS,
-                                                               0), True)
+                                                               sc.SC_NODE), True)
         list_of_addrs = []
         while not it.is_over():
             trans_objs.append(it.value(2))
