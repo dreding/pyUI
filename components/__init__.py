@@ -20,6 +20,7 @@ along with OSTIS.  If not, see <http://www.gnu.org/licenses/>.
 -----------------------------------------------------------------------------
 """
 __all__ = ['scg',
+            'scs',
 			'common',
 			'geometry',
 			'text',
@@ -45,6 +46,7 @@ modules = [
 #			'panels.windowpanel',
 			'panels.taskpanel',
 			'scg.base.scg_init',
+			'scs.scs_init',
 			'text.text_init',
 #			'audio.audio_init',
 #			'chemistry.chem_init',
