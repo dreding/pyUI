@@ -91,6 +91,11 @@ class SCsViewer(BaseLogic):
         self._createArea()
         self.widget.setCaption(unicode(self.getContent()))
 
+        #self.widget.setCaption("#FFFFFF This is color. #FF00FF And this is other")
+        #self.widget.setTextAlign()
+
+        self.widget.setTextColour(mygui.Colour(0, 0, 0, 1))
+
     def _onContentUpdate(self):
 
         import suit.core.keynodes as keynodes
@@ -160,15 +165,45 @@ class SCsViewer(BaseLogic):
 
             if fmt.this == keynodes.ui.format_scsx.this or fmt.this == keynodes.ui.format_string.this:
                 value = session.get_content_str(_addr)
-            elif fmt.this == keynodes.ui.format_string.this or fmt.this == keynodes.ui.format_real.this:
-                value = str(session.get_content_real(_addr))
 
             if value is None:
                 return ""
 
-            return value
+            else:
+             return self._setContentHighlighting(value)
+        #self._setContentHighlighting(self.newvalue)
 
         return ""
+
+
+    def _setContentHighlighting(self, string):
+        i = 0
+        newvalue =''
+        word = ''
+        while i < len(string):
+            symb = string[i]
+            if symb != '|' and symb != ';':
+                word = word + symb
+                i = i + 1
+            else:
+                word = word.lstrip(' ')
+                if word.startswith('sc-arc'):
+                    word = '#00CC33	' + word
+                if i+1 < len(string):
+                    if symb + string[i+1] == ';;':
+                        if i+2 < len(string) and string[i+2] == '\n':
+                            newvalue += word + '#0000FF;;#000000'
+                        else:
+                            newvalue += word + '#0000FF;;#000000' + '\n'
+                    else:
+                        newvalue += word
+                    word = ''
+                    i = i +1
+                if symb == '|':
+                    newvalue += word + '#0000FF|#000000'
+                word = ''
+                i = i +1
+        return newvalue
 
     def _createStaticText(self):
 
@@ -177,7 +212,7 @@ class SCsViewer(BaseLogic):
             mygui.Align(mygui.ALIGN_VSTRETCH),
             "Main")
         self.widget.setVisible(False)
-        self.widget.setTextColour(mygui.Colour(0.0, 0.0, 0.0, 1.0))
+       # self.widget.setTextColour(mygui.Colour(1, 0, 0, 1))
         #self.widget.setCaption(self.getContent())
         self.widget.setNeedMouseFocus(False)
 

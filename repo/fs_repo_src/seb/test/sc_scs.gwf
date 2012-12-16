@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<GWF version="2.0">
+    <staticSector>
+        <node type="node/const/general_node" idtf="test1_hg" shapeColor="193" id="31832720" parent="0" left="0" top="0" right="55" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="126" y="28" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[включение* | sc-arc-main/arc1| sc-arc-common/pair2;; включение* | sc-arc-main/arc3| Треугольник;; включение* | sc-arc-main/arc5| sc-arc-common/pair6;;
+включение* | sc-arc-main/arc7| Квадрат;;  ]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="test1_sc_scs" shapeColor="0" id="67995008" parent="0" left="0" top="0" right="75" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="556" y="338" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[//// обозначение непарной связки
+stype_nopair_sheaf		=	"stype_nopair_sheaf"	=	{};
+//// обозначение структуры
+stype_struct			=	"stype_struct"	=	{};
+//// обозначение понятия
+stype_concept			=	"stype_concept"	=	{};
+//// * обозначение отношения
+stype_relation			=	"stype_relation"	=	{};
+//// ** обозначение бинарного неориентированного отношения
+stype_bin_noorient_rel	=	"stype_bin_noorient_rel"	=	{};
+//// ** обозначение бинарного ориентированного отношения
+stype_bin_orient_rel	= 	"stype_bin_orient_rel"	=	{};
+//// *** обозначение бинарного ориентированного ролевого отношения
+stype_bin_orient_role_rel			=	"stype_bin_orient_role_rel"	=	{};
+//// *** обозначение бинарного ориентированного неролевого отношения
+stype_bin_orient_norole_rel	=	"stype_bin_orient_norole_rel"	=	{};
+//// ** обозначение небинарного неориентированного отношения
+stype_nobin_noorient_rel	=	"stype_nobin_noorient_rel"	=	{};
+//// ** обозначение небинарного ориентированного отношения
+stype_nobin_orient_rel		=	"stype_nobin_orient_rel"	=	{};
+//// * обозначение понятия, не являющегося отношением
+stype_concept_norel		=	"stype_concept_norel"	=	{};
+//// ** обозначение класса структур
+stype_struct_class			=	"stype_struct_class"	=	{};
+//// ** обозначение класса внешних объектов
+stype_ext_obj_class			=	"stype_ext_obj_class"	=	{};
+//// *** обозначение класса внешних информационных конструкций, имеющих однотипную структуру
+stype_ext_info_type1_class	=	"stype_ext_info_type1_class"	=	{};
+//// обозначение внешнего объекта 
+stype_ext_obj				=	"stype_ext_obj"	=	{};
+//// * обозначение абстрактного внешнего объекта
+stype_ext_obj_abstract		=	"stype_ext_obj_abstract"	=	{};
+//// * обозначение реального внешнего объекта
+stype_ext_obj_real			=	"stype_ext_obj_real"	=	{};
+//// ** обозначение внешней информационной конструкции 
+stype_ext_info_constr		=	"stype_ext_info_constr"	=	{};
+//// ** обозначение реального внешнего неинформационного объекта
+stype_ext_noinfo_obj_real	=	"stype_ext_noinfo_obj_real"	=	{};]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="test1_sc_scs" shapeColor="0" id="67994864" parent="0" left="0" top="0" right="75" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="152" y="160" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="test3_sc_scs" shapeColor="0" id="67994720" parent="0" left="0" top="0" right="75" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="116" y="-156" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[215rtqte]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="test3_sc_scs" shapeColor="0" id="67994576" parent="0" left="0" top="0" right="75" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="499" y="-141" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[включение* | sc-arc-main/arc1 | sc-arc-common/pair2;; 
+
+включение* | sc-arc-main/arc2 | sc-arc-common/pair1;; 
+
+включение* | sc-arc-main/arc3 | sc-arc-common/pair3;; 
+
+включение* | sc-arc-main/arc4 | sc-arc-common/pair4;; 
+
+сторона* | sc-arc-main/arc5 | sc-arc-common/pair1;; 
+
+сторона* | sc-arc-main/arc6 | sc-arc-common/pair2;;
+
+сторона* | sc-arc-main/arc7 | sc-arc-common/pair4;; 
+
+сторона* | sc-arc-main/arc8 | sc-arc-common/pair3;; 
+
+Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) | sc-arc-common/pair1 | Отр(ТчкВ;ТчкС);; 
+
+Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) | sc-arc-common/pair2 | Отр(ТчкC;ТчкD);; 
+
+Треугк(ТчкВ;ТчкС;ТчкD) | sc-arc-common/pair3 | Отр(ТчкВ;ТчкС);; 
+
+Треугк(ТчкВ;ТчкС;ТчкD) | sc-arc-common/pair4 | Отр(ТчкC;ТчкD);;]]></content>
+        </node>
+    </staticSector>
+</GWF>
